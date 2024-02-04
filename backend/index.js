@@ -13,8 +13,10 @@ app.use(cors());
 
 // Routes imported
 const songsRoute = require("./routes/songsRoute");
+const dashboardRoute = require("./routes/dashboardRoute");
 
 app.use('/api/songs', songsRoute);
+app.use('/api/stats', dashboardRoute);
 app.use(errorHandler);
 
 var port = process.env.PORT || 8090;
