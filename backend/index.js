@@ -20,11 +20,11 @@ app.use('/api/songs', songsRoute);
 app.use('/api/stats', dashboardRoute);
 
 // Serve front end
-app.use(express.static(path.join(_dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('*', (req, res) => {
     res.sendFile(
-        path.resolve(_dirname, '../', 'client', 'index.html')
+        path.resolve(__dirname, '../', 'client', 'index.html')
     );
 });
 
