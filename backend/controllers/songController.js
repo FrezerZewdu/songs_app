@@ -51,7 +51,7 @@ const deleteSong = asyncHandler(async(req, res) => {
         throw new Error("Song not found");
     }
 
-    await song.remove();
+    await song.deleteOne();
     res.status(200).json({ id: req.params.id });
 })
 
